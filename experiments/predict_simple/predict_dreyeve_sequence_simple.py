@@ -95,7 +95,8 @@ if __name__ == '__main__':
     makedirs([image_pred_dir])
 
     sequence_dir = join(dreyeve_dir, '{:02d}'.format(int(args.seq)))
-    for sample in tqdm(range(15, 7500 - 1)):
+    num_images = len(os.listdir(join(sequence_dir, 'frames')))
+    for sample in tqdm(range(frames_per_seq - 1, num_images - 1)):
         X = load_dreyeve_sample(sequence_dir=sequence_dir, sample=sample, mean_dreyeve_image=mean_dreyeve_image,
                                 frames_per_seq=frames_per_seq, h=h, w=w)
 
