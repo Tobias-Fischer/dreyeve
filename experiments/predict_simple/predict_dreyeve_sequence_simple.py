@@ -1,6 +1,6 @@
-import os; os.environ['KERAS_BACKEND'] = 'theano'# ; os.environ['THEANO_FLAGS'] = 'device=cuda,floatX=float32'
-# os.environ['CPLUS_INCLUDE_PATH'] = '/home/tobias/anaconda3/envs/dreyeve/include:/usr/local/cuda-10.1/targets/x86_64-linux/include'
-# os.environ['LIBRARY_PATH'] = '/home/tobias/anaconda3/envs/dreyeve/lib'
+import os; os.environ['KERAS_BACKEND'] = 'theano'; os.environ['THEANO_FLAGS'] = 'device=cuda,floatX=float32'
+os.environ['CPLUS_INCLUDE_PATH'] = '/home/tobias/anaconda3/envs/dreyeve/include:/usr/local/cuda-10.1/targets/x86_64-linux/include'
+os.environ['LIBRARY_PATH'] = '/home/tobias/anaconda3/envs/dreyeve/lib'
 
 import numpy as np
 import cv2
@@ -65,7 +65,7 @@ def load_dreyeve_sample(sequence_dir, sample, mean_dreyeve_image, frames_per_seq
 
 if __name__ == '__main__':
     frames_per_seq, h, w = 16, 448, 448
-    verbose = False
+    verbose = True
 
     # parse arguments
     parser = argparse.ArgumentParser()

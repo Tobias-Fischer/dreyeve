@@ -1,5 +1,6 @@
 import keras.backend as K
 
+import keras
 from keras.models import Model
 from keras.layers import Input, Reshape, merge, Lambda, Activation, LeakyReLU
 from keras.layers import Convolution3D, MaxPooling3D, Convolution2D
